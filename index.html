@@ -578,6 +578,15 @@
   .fade-in:nth-child(6) { animation-delay: 0.35s; }
   .fade-in:nth-child(7) { animation-delay: 0.4s; }
   .fade-in:nth-child(8) { animation-delay: 0.45s; }
+
+  .testimonials-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+  .tcard { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; position: relative; overflow: hidden; transition: all 0.25s; }
+  .tcard:hover { border-color: rgba(124,107,255,0.35); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,107,255,0.1); }
+  .tcard-quote { position: absolute; top: 8px; right: 18px; font-size: 56px; font-family: 'Syne', sans-serif; color: rgba(124,107,255,0.12); line-height: 1; }
+  .tcard-text { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 16px; font-style: italic; }
+  .tcard-author { display: flex; align-items: center; gap: 10px; }
+  .tcard-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: white; flex-shrink: 0; }
+  .tcard-name { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); }
 </style>
 </head>
 <body>
@@ -593,7 +602,7 @@
     </div>
 
     <div class="modal-screenshot">
-      <img src="cricket-screenshot.jpg" alt="Cricket Auction App Screenshot" onerror="this.parentElement.style.display='none'"/>
+      <img src="https://i.ibb.co/CjwYbTQ/cricket.jpg" alt="Cricket Auction App Screenshot" onerror="this.parentElement.style.display='none'"/>
     </div>
 
     <div class="modal-body">
@@ -769,11 +778,12 @@
 
   </div>
 
-  <!-- Testimonial -->
-  <div class="section-label fade-in">⭐ Client Review</div>
-  <div class="testimonial fade-in">
-    <div class="testimonial-text">I am happy with the website outcome. It looks really cool. Developer Nandhini has done a wonderful job by developing the advanced features I was asking for.</div>
-    <div class="testimonial-author">— Shabana, Client</div>
+  <div class="section-label fade-in">⭐ What Clients Say</div>
+  <div class="testimonials-grid">
+    <div class="tcard fade-in"><div class="tcard-quote">"</div><div class="tcard-text">I am happy with the website outcome. It looks really cool. Developer Nandhini has done a wonderful job by developing the advanced features I was asking for.</div><div class="tcard-author"><div class="tcard-avatar">SH</div><div><div class="tcard-name">Shabana</div></div></div></div>
+    <div class="tcard fade-in"><div class="tcard-quote">"</div><div class="tcard-text">Never give up attitude 🔥</div><div class="tcard-author"><div class="tcard-avatar">SB</div><div><div class="tcard-name">Shiva</div></div></div></div>
+    <div class="tcard fade-in"><div class="tcard-quote">"</div><div class="tcard-text">This is much more than what we expected. The result is uncontestable.</div><div class="tcard-author"><div class="tcard-avatar">SA</div><div><div class="tcard-name">Sam</div></div></div></div>
+    <div class="tcard fade-in"><div class="tcard-quote">"</div><div class="tcard-text">It feels great to see all your hard work paying off.</div><div class="tcard-author"><div class="tcard-avatar">SA</div><div><div class="tcard-name">Sam</div></div></div></div>
   </div>
 
   <!-- CTA -->
